@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Kodexempel 2</title>
+	</head>
+	<body>
+		<script>
+
+			//Funktion som skriver ut text på skärmen inom en p-tagg
+			function write(text){
+				document.write("<p>" + text + "</p>");
+			}
+
+			//Number
+			let tal1, tal2 = 32;
+
+			write(tal1);
+			write(tal2);
+
+			tal1 = 10;
+			tal1 += 2;
+			tal1++;
+
+			write(tal1);
+
+
+			//Strings
+			let fName = "Alexander";
+			let eNamn = "Vestin";
+
+			write(fName + " " + eNamn);
+
+			let text = "Lorem 'Ipsum' dolor";
+			let text2 = 'Lorem "Ipsum" dolor';
+
+			write(text);
+			write(text2);
+			
+
+			if(typeof tal1 === "int"){
+				write("Tal1 är en int");
+			}else{
+				write("Tal1 är inte en int");
+			}
+
+			if(typeof fName === "string"){
+				write("fName är en sträng");
+			}
+
+
+			//Speciala värden
+			let spec = NaN;
+			let spec2 = Infinity;
+			let spec3 = -Infinity;
+			let spec4 = undefined;
+			let spec5 = null;
+
+
+			//Booleans
+			let student = false;
+			let teacher = true;
+
+			if(teacher === true){
+				write("Jag är en lärare");
+			}
+
+			if(teacher){
+				write("Jag är en lärare");
+			}
+
+			if(student !== true){
+				write("Jag är INTE en student");
+			}
+
+			if(!student){
+				write("JAG ÄR INTE STUDENT!");
+			}
+
+			student = "Jag";
+			write(student);
+
+			student = 52;
+			write(student);
+			
+			
+		</script>
+	</body>
+</html>
