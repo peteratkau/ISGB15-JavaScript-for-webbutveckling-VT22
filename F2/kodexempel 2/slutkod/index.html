@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Kodexempel 2</title>
+</head>
+	<body>
+
+		<script type="text/javascript">
+			"use strict"
+
+			/*var human = {
+				name: "Carl",
+				age: 32,
+				length: 190,
+				job: "Webbutvecklare",
+
+				setName: function(name){
+					this.name = name;
+				},
+
+				birthday: function(){
+					this.age++;
+				}
+
+			};
+			
+			console.log(human);
+
+			human.birthday();
+			human.setName("Alexander");
+
+			console.log(human);*/
+
+
+
+			function Human(name, age, length){
+				this.name = name;
+				this.age = age;
+				this.length = length;
+
+				this.print = function(){
+					document.write("<p>" + this.name + " | " + this.age + " | " + this.length + "cm</p>");
+				}
+			}
+			var nameList = [
+				'Alexander',
+				'Carl',
+				'Maria',
+				"Pierre",
+				"Katarina",
+				"Peter",
+				"Lisa",
+				"Elin"
+			];
+			let humans = [];
+			function createRandomHumans(q){
+				for(let i = 0; i < q; i++){
+					let randName = nameList[Math.floor(Math.random() * nameList.length)];
+					let randAge = Math.floor(Math.random() * 100) + 1;
+					let randLength = Math.floor(Math.random() * 80) + 120;
+
+					let h = new Human(randName, randAge, randLength);
+					humans.push(h);
+					h.print();
+				}
+
+				console.log(humans);
+			}
+
+			createRandomHumans(8);
+
+	
+		</script>
+	</body>
+</html>
